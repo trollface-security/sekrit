@@ -2,6 +2,7 @@
 <html>
     <head>
         <title> trollSec | trollface security headquarters </title>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
         <link rel="shortcut icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9ba34366-c9cd-4599-999a-fd12aae2754b/d31kt2d-9bc4299c-1ee6-4537-9a3e-ce93bcdb6256.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzliYTM0MzY2LWM5Y2QtNDU5OS05OTlhLWZkMTJhYWUyNzU0YlwvZDMxa3QyZC05YmM0Mjk5Yy0xZWU2LTQ1MzctOWEzZS1jZTkzYmNkYjYyNTYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qjNAh3Ry4cdvzelCUeZkGKFAlDUY7OoKIccdjt0cLGs">
         <script>
             
@@ -14,18 +15,30 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
-                h1 {
+                body {
+                    background: linear-gradient(to bottom left, #7B68EE, #8B008B);
+                    background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+                }
+                h1,h2,h3 {
                     color: black;
                     text-align: center;
                     font-family: 'Libre Baskerville', serif;
                 }
 
                 button {
-                    background-color: black;
+                    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 1px );
+-webkit-backdrop-filter: blur( 1px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
                     padding: 10px;
                     border-radius: 5px;
-                    font-family: 'Courier New', Courier, monospace;
-                    color: white;
+                    font-family: monospace;
+                    color: black;
                 }
 
                 button:hover {
@@ -38,28 +51,74 @@
                 p {
                 font-family: 'Fredoka', sans-serif;   
                 }
+
+                section {
+
+
+                    background: rgba( 255, 255, 255, 0.55 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 1px );
+-webkit-backdrop-filter: blur( 1px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+width: 500px;
+height: 620px;
+align-items: center;
+text-align: center;
+
+                }
+
+                img {
+                    border-radius: 50px;
+                    box-shadow: 3px 4px 20px rgb(46, 46, 46);
+                }
             
             
         </style>
     </head>
     <body>
         <audio id="aud" src="https://trollface.dk/trollface.m4a" type="audio/mp4"></audio>
-<center> <img src="https://cdn.discordapp.com/attachments/842610340168728588/952102302066540604/d31kt2d-9bc4299c-1ee6-4537-9a3e-ce93bcdb6256.jpg" width="290" length="190" onclick="alert('hey you clicked on me nice job you fucking nigger')"> </center>
-<center> <h1> trollface security </h1> </center>
+<center>
+<section>
+    <br>
+<center> <img src="https://cdn.discordapp.com/attachments/842610340168728588/952102302066540604/d31kt2d-9bc4299c-1ee6-4537-9a3e-ce93bcdb6256.jpg" width="190" length="190" onclick="alert('hey you clicked on me nice job you fucking nigger')"> </center>
+<center> &nbsp;<h1> trollface security </h1> </center>
 <div id="wtf">
     <h3 style="text-align:center;"> trollSec </h3>
-<section>
-    <p style="text-align:center;"> trollface security headquarters </p>
+    <p id="app" style="text-align: center;"> </p>
+    <br>
+    <Br>
+
   <center> <button onclick="javascript:play()"> play music so you feel better  </button> </center>   
   <br>
   <center> <button onclick="window.open('https://evan.systems')"> portfolio homepage  </button> </center>  
-  <marquee behavior="scroll" direction="up" scrollamount="1">evan</marquee>
-<marquee behavior="scroll" direction="right" scrollamount="12">trollSec</marquee>
-<marquee behavior="scroll" direction="left" scrollamount="20">trollface security</marquee>
-<marquee behavior="scroll" direction="right" scrollamount="50">trolled</marquee>
+
 </section>
+</center>
 </div>
 
+
+<!-- scripts section -->
+<script>
+    var app = document.getElementById('app');
+
+var typewriter = new Typewriter(app, {
+  loop: true,
+  delay: 40,
+});
+
+typewriter
+  .pauseFor(100)
+  .typeString('trollface security :: headquarters ')
+  .pauseFor(300)
+  .deleteChars(35)
+  .typeString('troll complete, returning to hq')
+  .pauseFor(100)
+  .deleteChars(31)
+  .typeString('trollSec hours over here -evan')
+  .pauseFor(1000)
+  .start();
+</script>
 
     </body>
 </html>
