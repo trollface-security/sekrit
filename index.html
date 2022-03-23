@@ -15,22 +15,57 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+            :root {
+                --bg: linear-gradient(39deg, rgba(34,193,195,1) 0%, rgba(255,205,240,1) 73%, rgba(253,187,45,1) 100%);;
+                --color: black;
+                --box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                transition: 0.5s;
+                    transition-duration: 0.5s;
+            }
+
+            .dark {
+                --bg: rgb(46,46,51);
+                --color: white;
+                --box-shadow: 0 8px 32px 0 rgba(113, 113, 113, 0.37);
+                transition: 0.5s;
+                    transition-duration: 0.5s;
+            }
+
+            :root:after {
+                transition: 0.5s;
+                    transition-duration: 0.5s;
+            }
+
+            :root:before {
+                transition: 0.5s;
+                    transition-duration: 0.5s;
+            }
+            :before {
+                transition: 0.5s;
+                transition-duration: 0.5s;
+            }
+
+            :after {
+                transition: 0.5s;
+                    transition-duration: 0.5s;
+            }
                 body {
-                    background: linear-gradient(39deg, rgba(34,193,195,1) 0%, rgba(255,205,240,1) 73%, rgba(253,187,45,1) 100%);
+                    background: var(--bg);
                     background-attachment: fixed;
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;
+                    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
                 }
                 h1,h2,h3 {
-                    color: black;
+                    color: var(--color);
                     text-align: center;
-                    font-family: 'Libre Baskerville', serif;
+                    
                 }
 
                 button {
                     background: rgba( 255, 255, 255, 0.15);
-                    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                    box-shadow: var(--box-shadow);
                     backdrop-filter: blur( 1px );
                     -webkit-backdrop-filter: blur( 1px );
                     border-radius: 10px;
@@ -39,24 +74,34 @@
                     border-radius: 5px;
                     font-family: monospace;
                     color: black;
+                    transition: 0.5s;
+                    transition-duration: 0.5s;
                 }
+
 
                 button:hover {
                     transform: translateY(-5px);
                     transition: 0.5s;
+                    transition-duration: 0.5s;
                     color: black;
                     background-color: white;
                 }
-            
+                
+                button:after {
+                    transform: translateY(5px);
+                    transition: 0.5s;
+                    transition-duration: 0.5s;
+                }
                 p {
-                font-family: 'Fredoka', sans-serif;   
+                    color: var(--color);
+                    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;  
                 }
 
                 section {
 
 
                     background: rgba( 255, 255, 255, 0.35);
-                    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                    box-shadow: var(--box-shadow);
                     backdrop-filter: blur( 4.9px );
                     -webkit-backdrop-filter: blur( 4.9px );
                     border-radius: 10px;
@@ -72,9 +117,19 @@
                     border-radius: 50px;
                     box-shadow: 3px 4px 20px rgb(46, 46, 46);
                 }
+                svg {
+                    stroke: var(--color);
+                }
             
             
         </style>
+        <script>
+            function a() {
+  var element = document.body;
+  element.classList.toggle("dark");
+}
+        </script>
+
             <meta content="trollSec headquarters" property="og:description">
             <meta content="https://c.tenor.com/sLYf5FwT77MAAAAM/it-is-just-troll-dance.gif" property="og:image">
             <link type="application/json+oembed" href="https://cdn.discordapp.com/attachments/842610340168728588/952539901172256778/thing.json">
@@ -82,6 +137,12 @@
             <meta name="twitter:card" content="summary_large_image">
     </head>
     <body>
+        <div topnav>
+            <a href="#" onclick="a()">
+                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                 </svg></a>
+        </div>
         <audio id="aud" src="https://trollface.dk/trollface.m4a" type="audio/mp4"></audio>
 <center>
 <section>
