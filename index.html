@@ -15,12 +15,18 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+            html {
+                transition: 0.5s
+            }
             :root {
                 --bg: linear-gradient(39deg, rgba(34,193,195,1) 0%, rgba(255,205,240,1) 73%, rgba(253,187,45,1) 100%);;
                 --color: black;
                 --box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
                 transition: 0.5s;
-                    transition-duration: 0.5s;
+                transition-duration: 0.5s;
+                --slide: radial-gradient(circle, rgba(251,63,63,1) 0%, rgba(234,252,70,1) 100%);
+                --slide-color: rgb(255, 255, 255);
+                --other: rgb(255, 255, 255);
             }
 
             .dark {
@@ -28,12 +34,15 @@
                 --color: white;
                 --box-shadow: 0 8px 32px 0 rgba(113, 113, 113, 0.37);
                 transition: 0.5s;
-                    transition-duration: 0.5s;
+                transition-duration: 0.5s;
+                --slide: black;
+                --slide-color: white;
+                --other: white;
             }
 
             :root:after {
                 transition: 0.5s;
-                    transition-duration: 0.5s;
+                transition-duration: 0.5s;
             }
 
             :root:before {
@@ -120,7 +129,44 @@
                 svg {
                     stroke: var(--color);
                 }
-            
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            display: none;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--slide);
+            border-radius: 34px;
+            transition: .4s;
+        }
+            .slider:before {
+            content: "";
+            position: absolute;
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background: var(--other);
+            border-radius: 50%;
+            transition: .4s;
+            }
+            input:checked + .slider {
+            background: var(--slide);
+            }
+            input:checked + .slider:before {
+            transform: translateX(26px);
+            }
             
         </style>
         <script>
@@ -138,10 +184,12 @@
     </head>
     <body>
         <div topnav>
-            <a href="#" onclick="a()">
-                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-                 </svg></a>
+        
+                <label class="switch">
+                    <input type="checkbox" onclick="a()">
+                    <span class="slider"></span>
+                  </label>
+
         </div>
         <audio id="aud" src="https://trollface.dk/trollface.m4a" type="audio/mp4"></audio>
 <center>
