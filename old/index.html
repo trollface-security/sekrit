@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> trollSec | trollface security headquarters </title>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        <link rel="shortcut icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9ba34366-c9cd-4599-999a-fd12aae2754b/d31kt2d-9bc4299c-1ee6-4537-9a3e-ce93bcdb6256.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzliYTM0MzY2LWM5Y2QtNDU5OS05OTlhLWZkMTJhYWUyNzU0YlwvZDMxa3QyZC05YmM0Mjk5Yy0xZWU2LTQ1MzctOWEzZS1jZTkzYmNkYjYyNTYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qjNAh3Ry4cdvzelCUeZkGKFAlDUY7OoKIccdjt0cLGs">
+        <script>
+            
+      function play() {
+        var audio = document.getElementById("aud");
+        audio.play();
+      }
+    
+        </script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+            html {
+                transition: 0.5s
+            }
+            :root {
+                --bg: linear-gradient(39deg, rgba(34,193,195,1) 0%, rgba(255,205,240,1) 73%, rgba(253,187,45,1) 100%);;
+                --color: black;
+                --box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                transition: 0.5s;
+                transition-duration: 0.5s;
+                --slide: radial-gradient(circle, rgba(251,63,63,1) 0%, rgba(234,252,70,1) 100%);
+                --slide-color: rgb(255, 255, 255);
+                --other: rgb(255, 255, 255);
+            }
+
+            .dark {
+                --bg: rgb(46,46,51);
+                --color: white;
+                --box-shadow: 0 8px 32px 0 rgba(113, 113, 113, 0.37);
+                transition: 0.5s;
+                transition-duration: 0.5s;
+                --slide: black;
+                --slide-color: white;
+                --other: white;
+            }
+
+            :root:after {
+                transition: 0.5s;
+                transition-duration: 0.5s;
+            }
+
+            :root:before {
+                transition: 0.5s;
+                    transition-duration: 0.5s;
+            }
+            :before {
+                transition: 0.5s;
+                transition-duration: 0.5s;
+            }
+
+            :after {
+                transition: 0.5s;
+                    transition-duration: 0.5s;
+            }
+                body {
+                    background: var(--bg);
+                    background-attachment: fixed;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
+                }
+                h1,h2,h3 {
+                    color: var(--color);
+                    text-align: center;
+                    
+                }
+
+                button {
+                    background: rgba( 255, 255, 255, 0.15);
+                    box-shadow: var(--box-shadow);
+                    backdrop-filter: blur( 1px );
+                    -webkit-backdrop-filter: blur( 1px );
+                    border-radius: 10px;
+                    border: 1px solid rgba( 255, 255, 255, 0.18 );
+                    padding: 10px;
+                    border-radius: 5px;
+                    font-family: monospace;
+                    color: black;
+                    transition: 0.5s;
+                    transition-duration: 0.5s;
+                }
+
+
+                button:hover {
+                    transform: translateY(-5px);
+                    transition: 0.5s;
+                    transition-duration: 0.5s;
+                    color: black;
+                    background-color: white;
+                }
+                
+                button:after {
+                    transform: translateY(5px);
+                    transition: 0.5s;
+                    transition-duration: 0.5s;
+                }
+                p {
+                    color: var(--color);
+                    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;  
+                }
+
+                section {
+
+
+                    background: rgba( 255, 255, 255, 0.35);
+                    box-shadow: var(--box-shadow);
+                    backdrop-filter: blur( 4.9px );
+                    -webkit-backdrop-filter: blur( 4.9px );
+                    border-radius: 10px;
+                    border: 1px solid rgba( 255, 255, 255, 0.18 );
+                    width: 500px;
+                    height: 620px;
+                    align-items: center;
+                    text-align: center;
+
+                }
+
+                img {
+                    border-radius: 50px;
+                    box-shadow: 3px 4px 20px rgb(46, 46, 46);
+                }
+                svg {
+                    stroke: var(--color);
+                }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            display: none;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--slide);
+            border-radius: 34px;
+            transition: .4s;
+        }
+            .slider:before {
+            content: "";
+            position: absolute;
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background: var(--other);
+            border-radius: 50%;
+            transition: .4s;
+            }
+            input:checked + .slider {
+            background: var(--slide);
+            }
+            input:checked + .slider:before {
+            transform: translateX(26px);
+            }
+            
+        </style>
+        <script>
+            function a() {
+  var element = document.body;
+  element.classList.toggle("dark");
+}
+        </script>
+
+            <meta content="trollSec headquarters" property="og:description">
+            <meta content="https://c.tenor.com/sLYf5FwT77MAAAAM/it-is-just-troll-dance.gif" property="og:image">
+            <link type="application/json+oembed" href="https://cdn.discordapp.com/attachments/842610340168728588/952539901172256778/thing.json">
+            <meta name="theme-color" content="#ee00ff">
+            <meta name="twitter:card" content="summary_large_image">
+    </head>
+    <body>
+        <div topnav>
+        
+                <label class="switch">
+                    <input type="checkbox" onclick="a()">
+                    <span class="slider"></span>
+                  </label>
+
+        </div>
+        <audio id="aud" src="https://trollface.dk/trollface.m4a" type="audio/mp4"></audio>
+<center>
+<section>
+    <br>
+<center> <img src="https://cdn.discordapp.com/attachments/842610340168728588/952102302066540604/d31kt2d-9bc4299c-1ee6-4537-9a3e-ce93bcdb6256.jpg" width="190" length="190" onclick="alert('hey you clicked on me nice job you fucking nigger')"> </center>
+<center> &nbsp;<h1> trollface security </h1> </center>
+<div id="wtf">
+    <h3 style="text-align:center;"> trollSec </h3>
+    <p id="app" style="text-align: center;"> </p>
+    <br>
+    <Br>
+
+  <center> <button onclick="javascript:play()"> play music so you feel better  </button> </center>   
+  <br>
+  <center> <button onclick="window.open('https://evan.systems')"> portfolio homepage  </button> </center>  
+  <br>
+  <center> <button onclick="window.open('https://github.com/trollface-security')"> our github </button></center>
+</section>
+</center>
+</div>
+
+
+<!-- scripts section -->
+<script>
+    var app = document.getElementById('app');
+
+var typewriter = new Typewriter(app, {
+  loop: true,
+  delay: 40,
+});
+
+typewriter
+  .pauseFor(100)
+  .typeString('trollface security :: headquarters ')
+  .pauseFor(300)
+  .deleteChars(35)
+  .typeString('troll complete, returning to hq')
+  .pauseFor(100)
+  .deleteChars(31)
+  .typeString('trollSec hours over here -evan')
+  .pauseFor(1000)
+  .start();
+</script>
+
+    </body>
+</html>
