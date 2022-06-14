@@ -34,7 +34,7 @@ window.onload = function () {
         frameSpeed = 0.005
         setInterval(() => {
           if (debounce) return
-            fetch("http://exdeeexdeecool.0x3van.repl.co/").then(a => {
+            fetch("https://exdeeexdeecool.0x3van.repl.co/").then(a => {
                 a.json().then(b => {
                   if(amt==b) return
                   countFrom = amt
@@ -46,7 +46,7 @@ window.onload = function () {
             })
         }, 1000)
     }, 12000)
-    fetch("http://exdeeexdeecool.0x3van.repl.co/").then(a => {
+    fetch("https://exdeeexdeecool.0x3van.repl.co/").then(a => {
         a.json().then(b => {
           if(amt==b) return
           amt = b
