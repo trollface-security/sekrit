@@ -27,7 +27,7 @@ const animateCountUp = el => {
         }
     }, 1);
 };
-
+// foo
 window.onload = function () {
     var el = document.getElementById("rb")
     setTimeout(() => {
