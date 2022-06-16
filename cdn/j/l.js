@@ -1,7 +1,7 @@
 const frameDuration = 1000 / 60;
 var totalFrames = 0
 const easeOutQuad = t => t * (2 - t);
-var frameSpeed = 30000
+var frameSpeed = 9000
 var debounce = false
 var amt
 var countFrom = 0
@@ -31,7 +31,7 @@ const animateCountUp = el => {
 window.onload = function () {
     var el = document.getElementById("rb")
     setTimeout(() => {
-        frameSpeed = 0.005
+        frameSpeed = 3
         setInterval(() => {
           if (debounce) return
             fetch("https://exdeeexdeecool.0x3van.repl.co/").then(a => {
